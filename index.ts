@@ -1,4 +1,4 @@
-const RADIO = 6378137.0; // (WGS-84)
+const RADIUS = 6378137.0; // (WGS-84)
 
 class Convert {
   originShift: number;
@@ -7,8 +7,8 @@ class Convert {
 
   constructor() {
     this.tileSize = 256;
-    this.initialResolution = (2 * Math.PI * RADIO) / this.tileSize;
-    this.originShift = (2 * Math.PI * RADIO) / 2.0;
+    this.initialResolution = (2 * Math.PI * RADIUS) / this.tileSize;
+    this.originShift = (2 * Math.PI * RADIUS) / 2.0;
   }
 
   resolution = (zoom: number): number =>
